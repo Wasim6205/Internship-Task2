@@ -15,11 +15,12 @@
 svg{
     position: absolute;
     top: 50px;
-    left: 180px;
+    left: 380px;
     width: 50%;
     height: 50%;
     padding: 0;
     border-radius: 50%;
     z-index: 1000;
-    /* background-color: red; */
+    background-color: #FF33FC;
+    z-index: 10;
 }

@@ -16,13 +16,14 @@ $(".owl-carousel").owlCarousel({
   });
 
   document.addEventListener("DOMContentLoaded", function() {
-    // const dott = document.getElementsByClassName("dotsst")
+    const dott = document.querySelector(".dotsfill2")
     const image1 = document.querySelector('.animImage1');
     const image2 = document.querySelector('.animImage2');
     const dots = document.querySelectorAll(".dots-nav");
-    // const mainImage = document.getElementById("main-image");
     const leftColor =document.getElementById("left")
     const rightColor =document.getElementById("right")
+    const stroke = document.querySelector(".transrg")
+    const svg = this.querySelector("svg")
 
     dots.forEach(dot => {
         dot.addEventListener("click", function() {
@@ -31,16 +32,15 @@ $(".owl-carousel").owlCarousel({
             const newColor1 = this.getAttribute("data-color-1");
             const newColor2 = this.getAttribute("data-color-2");
 
-            // mainImage.style.opacity = 0;
-
             setTimeout(() => {
+              svg.style.backgroundColor = newColor1
                 image1.src = newImage1;
                 image2.src = newImage2;
                 leftColor.style.backgroundColor = newColor1;
                 rightColor.style.backgroundColor = newColor2;
                 animate()
-                // mainImage.style.opacity = 1;
-                // dott.style.opacity = 0;
+                dott.style.opacity = 1;
+                stroke.style.opacity = 0.8;
             }, 500);
         });
     });
