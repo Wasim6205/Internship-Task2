@@ -9,6 +9,9 @@
 #right{
     background-color: #D5DBDB;
 }
+.dots-nav{
+    cursor: pointer;
+}
 svg{
     position: absolute;
     top: 50px;
